@@ -1,4 +1,8 @@
 import { createApp } from "vue";
+import { globalRegister } from "./global";
 import App from "./App.vue";
 
-createApp(App).mount("#app");
+const app = createApp(App);
+// 全局注册 element-plus 等
+app.use(globalRegister);
+app.mount("#app");
