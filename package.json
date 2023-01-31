@@ -10,7 +10,9 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "babel-plugin-import": "^1.13.6",
     "core-js": "^3.8.3",
+    "element-plus": "^1.0.2-beta.71",
     "vue": "^3.2.13"
   },
   "devDependencies": {
