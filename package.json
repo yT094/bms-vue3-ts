@@ -10,6 +10,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "babel-plugin-import": "^1.13.6",
     "core-js": "^3.8.3",
     "element-plus": "^1.0.2-beta.71",
