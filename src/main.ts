@@ -1,6 +1,8 @@
 import { createApp } from "vue";
 import { globalRegister } from "./global";
 import App from "./App.vue";
+import "normalize.css";
+import "@/assets/css/index.less";
 
 import jnRequst from "@/network";
 import type { IDataType } from "@/network/types";
