@@ -43,9 +43,17 @@ class JNRequest {
     );
   }
 
-  request(config: AxiosRequestConfig): void {
-    this.instance.request(config).then((res) => {
-      console.log(res);
+  request<T>(config: AxiosRequestConfig): Promise<T> {
+    return new Promise((resolve, reject) => {
+      this.instance
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        .request<any, T>(config)
+        .then((res) => {
+          resolve(res);
+        })
+        .catch((err) => {
+          reject(err);
+        });
     });
   }
 }

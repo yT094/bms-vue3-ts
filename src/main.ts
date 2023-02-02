@@ -3,10 +3,21 @@ import { globalRegister } from "./global";
 import App from "./App.vue";
 
 import jnRequst from "@/network";
-jnRequst.request({
-  url: "/home/multidata",
-  method: "GET",
-});
+import type { IDataType } from "@/network/types";
+
+jnRequst
+  .request<IDataType>({
+    url: "/home/multidata",
+    method: "GET",
+  })
+  .then((res) => {
+    console.log(res.data);
+    console.log(res.returnCode);
+    console.log(res.success);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 const app = createApp(App);
 // 全局注册 element-plus 等
