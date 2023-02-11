@@ -4,6 +4,8 @@ import App from "./App.vue";
 import "normalize.css";
 import "@/assets/css/index.less";
 
+import router from "./router";
+
 import jnRequst from "@/network";
 import type { IDataType } from "@/network/types";
 
@@ -24,4 +26,6 @@ jnRequst
 const app = createApp(App);
 // 全局注册 element-plus 等
 app.use(globalRegister);
+// 注册路由
+app.use(router);
 app.mount("#app");
