@@ -14,7 +14,7 @@
 
 <script lang="ts">
 import { defineComponent, reactive } from "vue";
-import { rules } from "../config/account-config";
+import { rules } from "../config/config";
 
 export default defineComponent({
   setup() {
