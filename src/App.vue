@@ -1,6 +1,4 @@
 <template>
-  <router-link to="/login">login </router-link>
-  <router-link to="/main"> main</router-link>
   <router-view></router-view>
 </template>
 
@@ -13,13 +11,4 @@ export default defineComponent({
 });
 </script>
 
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style lang="less"></style>
