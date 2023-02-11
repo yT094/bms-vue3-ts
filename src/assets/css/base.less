@@ -7,3 +7,32 @@ html, body, #app {
   width: 100%;
   height: 100%;
 }
+
+.padl(100);
+.padl(@n, @i: 0) when (@i =< @n) {
+   .pl@{i} {
+      padding-left: 0px + @i;
+   }
+   .pr@{i} {
+      padding-right: 0px + @i;
+   }
+   .pt@{i} {
+      padding-top: 0px + @i;
+   }
+   .pb@{i} {
+      padding-bottom: 0px + @i;
+   }
+   .ml@{i} {
+      margin-left: 0px + @i;
+   }
+   .mr@{i} {
+      margin-right: 0px + @i;
+   }
+   .mt@{i} {
+      margin-top: 0px + @i;
+   }
+   .mb@{i} {
+      margin-bottom: 0px + @i;
+   }
+   .padl(@n, (@i+1));
+}
