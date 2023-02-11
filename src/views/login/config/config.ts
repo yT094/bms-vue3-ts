@@ -25,3 +25,25 @@ export const rules = {
     },
   ],
 };
+
+export const phoneRules = {
+  phone: [
+    {
+      required: true,
+      message: "请输入手机号",
+      trigger: "blur",
+    },
+    {
+      pattern: /^[0-9]$/,
+      message: "手机号必须是数字",
+      trigger: "blur",
+    },
+  ],
+  verificationCode: [
+    {
+      required: true,
+      message: "请输入验证码",
+      trigger: "blur",
+    },
+  ],
+};
