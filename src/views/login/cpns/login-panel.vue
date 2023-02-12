@@ -16,6 +16,17 @@
         <LoginPhone></LoginPhone>
       </el-tab-pane>
     </el-tabs>
+
+    <div class="l-other">
+      <el-checkbox v-model="isKeepPassword">记住密码</el-checkbox>
+      <el-link type="primary">忘记密码</el-link>
+    </div>
+
+    <div class="l-login-btn">
+      <el-button type="primary" @click="handleBtnClick" class="btn">
+        立即登录
+      </el-button>
+    </div>
   </div>
 </template>
 
@@ -28,7 +39,11 @@ export default defineComponent({
   components: { LoginAccount, LoginPhone },
   setup() {
     const activeName = ref("account");
-    return { activeName };
+    const isKeepPassword = ref(true);
+    const handleBtnClick = () => {
+      console.log("登录按钮");
+    };
+    return { activeName, isKeepPassword, handleBtnClick };
   },
 });
 </script>
@@ -39,6 +54,19 @@ export default defineComponent({
   width: 320px;
   .l-title {
     text-align: center;
+  }
+
+  .l-other {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .l-login-btn {
+    margin-top: 10px;
+    .btn {
+      width: 100%;
+    }
   }
 }
 </style>
