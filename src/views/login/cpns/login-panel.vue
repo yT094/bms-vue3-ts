@@ -44,7 +44,7 @@ export default defineComponent({
     // 点击登录按钮，触发账户、手机登录的登录请求
     const handleBtnClick = () => {
       console.log("登录按钮");
-      accountRef.value?.loginAction();
+      accountRef.value?.loginAction(isKeepPassword.value);
     };
     return { activeName, isKeepPassword, accountRef, handleBtnClick };
   },
