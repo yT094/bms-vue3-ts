@@ -25,8 +25,8 @@ import localCache from "@/utils/cache";
 export default defineComponent({
   setup() {
     const ruleForm = reactive({
-      account: "",
-      password: "",
+      account: localCache.getCache("account") ?? "",
+      password: localCache.getCache("password") ?? "",
     });
 
     const formRef = ref<InstanceType<typeof ElForm>>();
