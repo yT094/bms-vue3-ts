@@ -6,7 +6,7 @@
         <template #label>
           <span><i class="el-icon-user-solid"></i>账号登录</span>
         </template>
-        <LoginAccount></LoginAccount>
+        <LoginAccount ref="accountRef"></LoginAccount>
       </el-tab-pane>
 
       <el-tab-pane name="phone">
@@ -40,10 +40,13 @@ export default defineComponent({
   setup() {
     const activeName = ref("account");
     const isKeepPassword = ref(true);
+    const accountRef = ref<InstanceType<typeof LoginAccount>>();
+    // 点击登录按钮，触发账户、手机登录的登录请求
     const handleBtnClick = () => {
       console.log("登录按钮");
+      accountRef.value?.loginAction();
     };
-    return { activeName, isKeepPassword, handleBtnClick };
+    return { activeName, isKeepPassword, accountRef, handleBtnClick };
   },
 });
 </script>
